@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Profil pribadi Daiva Rafa Janitra.">
+  <title>Daiva Rafa Janitra | Personal Profile</title>
+  <style>
+    :root {
+      --ink: #17324d;
+      --muted: #5f7891;
+      --blue: #4da9e8;
+      --deep: #287ac0;
+      --glass: rgba(255,255,255,.72);
+      --line: rgba(255,255,255,.78);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 10%, rgba(255,255,255,.95), transparent 28rem),
+        radial-gradient(circle at 90% 80%, rgba(103,194,244,.55), transparent 26rem),
+        linear-gradient(135deg, #dff5ff 0%, #a9dcfa 48%, #75b9ed 100%);
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1060px, calc(100% - 36px)); margin: auto; }
+    header { padding: 22px 0; }
+    nav { display:flex; justify-content:space-between; align-items:center; gap:18px; }
+    .brand { font-weight:800; letter-spacing:.3px; font-size:1.05rem; }
+    .navlinks { display:flex; gap:22px; color:#315c7e; font-size:.94rem; }
+    .navlinks a:hover { color:#0e4e83; }
+    .hero {
+      display:grid; grid-template-columns:1.25fr .75fr; gap:34px;
+      align-items:center; padding:76px 0 62px;
+    }
+    .eyebrow {
+      display:inline-block; padding:8px 14px; border:1px solid var(--line);
+      border-radius:99px; background:rgba(255,255,255,.45);
+      color:#286b9f; font-size:.85rem; font-weight:700;
+    }
+    h1 { font-size:clamp(2.5rem, 7vw, 5rem); line-height:1.02; margin:20px 0 16px; letter-spacing:-2px; }
+    h1 span { color:#287fc0; }
+    .intro { max-width:590px; color:#42627e; font-size:1.08rem; line-height:1.8; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+    .btn { display:inline-block; padding:12px 19px; border-radius:13px; font-weight:700; transition:.2s; }
+    .btn-primary { color:white; background:linear-gradient(135deg,#45a9e8,#287ac0); box-shadow:0 10px 22px #398bc044; }
+    .btn-light { background:rgba(255,255,255,.65); border:1px solid white; }
+    .btn:hover { transform:translateY(-2px); }
+    .profile-card {
+      background:var(--glass); border:1px solid var(--line); border-radius:28px;
+      padding:28px; box-shadow:0 20px 55px rgba(35,105,157,.14);
+      text-align:center; backdrop-filter:blur(12px);
+    }
+    .avatar {
+      width:150px; height:150px; margin:0 auto 18px; border-radius:50%;
+      display:grid; place-items:center; font-size:4rem;
+      background:linear-gradient(145deg,#e9faff,#8acdf2);
+      border:7px solid rgba(255,255,255,.85);
+      box-shadow:0 12px 30px rgba(40,122,192,.18);
+    }
+    .profile-card h2 { margin:8px 0 5px; font-size:1.35rem; }
+    .profile-card p { color:var(--muted); margin:0; }
+    section { padding:35px 0; }
+    .section-title { font-size:1.8rem; margin:0 0 9px; letter-spacing:-.5px; }
+    .section-subtitle { color:var(--muted); margin:0 0 22px; line-height:1.6; }
+    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+    .info-card, .gallery-card {
+      background:var(--glass); border:1px solid var(--line); border-radius:22px;
+      padding:23px; box-shadow:0 12px 35px rgba(35,105,157,.09);
+      backdrop-filter:blur(10px);
+    }
+    .info-card h3 { margin:0 0 14px; font-size:1.08rem; }
+    .detail { display:flex; gap:12px; align-items:flex-start; padding:9px 0; color:#42627e; }
+    .detail strong { color:var(--ink); display:block; margin-bottom:3px; }
+    .detail-icon { font-size:1.25rem; width:28px; text-align:center; }
+    .skill-pill {
+      display:inline-block; margin:5px 5px 0 0; padding:9px 13px;
+      border-radius:99px; background:#e4f5ff; color:#286b9f; font-weight:700; font-size:.92rem;
+    }
+    .gallery-placeholder {
+      min-height:210px; border:2px dashed rgba(40,122,192,.35); border-radius:17px;
+      display:grid; place-items:center; text-align:center; padding:24px;
+      color:#527795; background:rgba(231,247,255,.55);
+    }
+    .gallery-placeholder .camera { font-size:2.3rem; margin-bottom:8px; }
+    footer { text-align:center; color:#527795; padding:38px 0 28px; font-size:.9rem; }
+    @media (max-width:720px) {
+      .navlinks { gap:12px; font-size:.82rem; }
+      .hero { grid-template-columns:1fr; padding:52px 0 38px; }
+      .profile-card { max-width:390px; width:100%; margin:auto; }
+      .grid { grid-template-columns:1fr; }
+      h1 { letter-spacing:-1.5px; }
+    }
+    @media (max-width:420px) {
+      .brand { font-size:.9rem; }
+      .navlinks { gap:9px; }
+      .navlinks a { font-size:.78rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav aria-label="Navigasi utama">
+      <a class="brand" href="#">DAIVA.RJ</a>
+      <div class="navlinks">
+        <a href="#tentang">Tentang</a>
+        <a href="#keahlian">Keahlian</a>
+        <a href="#galeri">Galeri</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <div>
+        <span class="eyebrow">✦ PERSONAL PROFILE</span>
+        <h1>Halo, saya<br><span>Daiva Rafa Janitra.</span></h1>
+        <p class="intro">
+          Selamat datang di website pribadi saya. Saya suka mengeksplorasi hal baru,
+          mengembangkan keterampilan, dan mengisi waktu dengan kegiatan yang saya sukai.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#tentang">Kenali Saya</a>
+          <a class="btn btn-light" href="#galeri">Lihat Galeri</a>
+        </div>
+      </div>
+      <aside class="profile-card">
+        <div class="avatar" aria-hidden="true">🎸</div>
+        <h2>Daiva Rafa Janitra</h2>
+        <p>Music • Guitar • Swimming</p>
+      </aside>
+    </div>
+
+    <section id="tentang">
+      <h2 class="section-title">Tentang Saya</h2>
+      <p class="section-subtitle">Sedikit informasi dan hal-hal yang saya sukai.</p>
+      <div class="grid">
+        <article class="info-card">
+          <h3>👤 Informasi Pribadi</h3>
+          <div class="detail"><span class="detail-icon">🪪</span><div><strong>Nama lengkap</strong>Daiva Rafa Janitra</div></div>
+          <div class="detail"><span class="detail-icon">📍</span><div><strong>Domisili</strong>Indonesia</div></div>
+          <div class="detail"><span class="detail-icon">✉️</span><div><strong>Email</strong><a href="mailto:daivarafa123@gmail.com">daivarafa123@gmail.com</a></div></div>
+        </article>
+        <article class="info-card" id="keahlian">
+          <h3>✨ Keterampilan & Hobi</h3>
+          <div class="detail"><span class="detail-icon">🎸</span><div><strong>Keterampilan</strong>Bermain gitar</div></div>
+          <div class="detail"><span class="detail-icon">🎯</span><div><strong>Hobi</strong>Bermain gitar dan berenang</div></div>
+          <div>
+            <span class="skill-pill">Guitar</span>
+            <span class="skill-pill">Swimming</span>
+            <span class="skill-pill">Creative</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="galeri">
+      <h2 class="section-title">Galeri Keterampilan</h2>
+      <p class="section-subtitle">Dokumentasi kegiatan dan keterampilan saya akan ditampilkan di sini.</p>
+      <div class="gallery-card">
+        <figure style="margin:0">
+          <img src="assets/galeri-gitar.jpg" alt="Daiva sedang bermain gitar di ruang latihan musik"
+               style="display:block;width:100%;max-height:620px;object-fit:cover;object-position:center 42%;border-radius:17px">
+          <figcaption style="color:#527795;text-align:center;padding:13px 5px 0;font-size:.93rem">
+            🎸 Dokumentasi bermain gitar
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    © <span id="year"></span> Daiva Rafa Janitra · Dibuat dengan ✦
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
